@@ -16,4 +16,7 @@ class Sitter(models.Model):
     pass
 
 class Pet(models.Model):
-    owner = models.ForeignKey(User, on_delete=models.CASCADE)
+    owner = models.ForeignKey(Owner, on_delete=models.CASCADE)
+    species = models.CharField(max_length=255)
+    breed = models.CharField(max_length=255)
+    name = models.CharField(max_length=255)
