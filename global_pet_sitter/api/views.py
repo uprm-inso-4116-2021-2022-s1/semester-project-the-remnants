@@ -10,15 +10,17 @@ class RegisterView(APIView):
         serializer = UserSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save()
+        print(request.data)
         return Response(serializer.data)
 
 
 class LoginView(APIView):
     def post(self, request):
-        email = request.data['email']
+        username = request.data['username']
+        user = User.objects.filter(username=username).first()
         password = request.data['password']
 
-        user = User.objects.filter(email=email).first()
+        print(User.objects.all())
 
         if user is None:
             raise AuthenticationFailed('User not found!')
