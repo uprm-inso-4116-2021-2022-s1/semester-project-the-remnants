@@ -2,6 +2,7 @@ import React from 'react'
 import Login from './components/Forms/Login'
 import Signup from './components/Forms/Signup'
 import LandingPage from './components/Landing/LandingPage'
+import Search from './components/search/Search'
 import {
     BrowserRouter as Router,
     Switch,
@@ -15,6 +16,7 @@ export default function App() {
             <Route exact path="/" component={LandingPage} />
             <Route path="/login" component={Login} />
             <Route path="/signup" component={Signup} />
+            <Route path="/search" component={Search} />
         </Switch>
     )
 }
