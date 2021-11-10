@@ -57,7 +57,7 @@ export default function Filter() {
                         disablePortal
                         id="Type-Of-Pet"
                         options={types}
-                        sx={{ width: 300 }}
+                        sx={{ width: 200 }}
                         renderInput={(params) => <TextField {...params} label="Type Of Pet" />}
                         />            
                     </Box>
@@ -68,7 +68,7 @@ export default function Filter() {
                             disablePortal
                             id="Pet-Breed"
                             options={breeds}
-                            sx={{ width: 300 }}
+                            sx={{ width: 200 }}
                             renderInput={(params) => <TextField {...params} label="Breed" />}
                             />            
                     </Box>
